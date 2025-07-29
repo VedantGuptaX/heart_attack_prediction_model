@@ -10,7 +10,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ./streamlit_app
     ports:
       - "8501:8501"
     container_name: heart-ui
