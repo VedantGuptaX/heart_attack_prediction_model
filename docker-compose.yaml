@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./app
+    ports:
+      - "8000:8000"
+    container_name: heart-backend
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8501:8501"
+    container_name: heart-ui
+    depends_on:
+      - backend
+
